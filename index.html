@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Form Demo</title>
   <style>
-    form {
+    fieldset {
       background-color: aliceblue;
     }
     button {
@@ -18,16 +18,21 @@
       border: 1px solid gray;
       padding: 1rem 1rem;
     }
+    .input-box {
+      border: 1px solid gray;
+      width: 80%;
+    }
+    
   </style>
 </head>
 <body>
   <form name="contact" method="POST" data-netlify="true">
     <fieldset>
       <legend>Please feel free to send a message</legend>
-      Email <br><input type="text"><br>
-      Message <br><input type="text"><br>
+      <label>Email <br><input class="input-box" type="text"><br></label>
+      <label>Message <br><textarea class="input-box" type="text"></textarea><br></label>
      
-      <fieldset>
+      <fieldset class="inner">
       <legend>Would you like a reply?</legend>
       <input type="radio" name="reply" value="yes"> Yes<br>
       <input type="radio" name="reply" value="no"> No<br>
@@ -35,7 +40,6 @@
      <button type="submit">Send Message</button>
     </fieldset>
     
-  </p>
 </form>
 </body>
 </html>
