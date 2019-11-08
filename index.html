@@ -1,46 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Form Demo</title>
-  <style>
-    fieldset {
-      background-color: aliceblue;
-    }
-    button {
-      background-color: aquamarine;
-      color: white;
-    }
-    legend {
-      color: aquamarine;
-      border: 1px solid gray;
-      padding: 1rem 1rem;
-      background-color: white;
-    }
-    .input-box {
-      border: 1px solid gray;
-      width: 80%;
-    }
-    
-  </style>
-</head>
-<body>
-  <form name="contact" method="POST" data-netlify="true">
-    <fieldset>
-      <legend>Please feel free to send a message</legend>
-      <label>Email <br><input class="input-box" type="text"><br></label>
-      <label>Message <br><textarea class="input-box" type="text"></textarea><br></label>
-     
-      <fieldset class="inner">
-      <legend>Would you like a reply?</legend>
-      <input type="radio" name="reply" value="yes"> Yes<br>
-      <input type="radio" name="reply" value="no"> No<br>
-     </fieldset>
-     <button type="submit">Send Message</button>
-    </fieldset>
-    
-</form>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Demo</title>
+    <style>
+      form {
+        display: grid;
+        grid-template-rows: 350px;
+        justify-items: center;
+      }
+      fieldset {
+        background-color: aliceblue;
+        border-radius: .25rem;
+      }
+      button {
+        font-family: 'Lato', sans-serif;
+        font-size: 2rem;
+        color: white;
+        background-color: aquamarine;
+        border-radius: .25rem;
+        padding: .5rem .5rem;
+      }
+      legend {
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: aquamarine;
+        border: 1px solid gray;
+        border-radius: .25rem;
+        padding: .5rem .5rem;
+        background-color: white;
+      }
+      .input-box {
+        border: 1px solid gray;
+        width: 80%;
+      }
+      label {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <body>
+    <form name="contact" method="POST" data-netlify="true">
+      <fieldset>
+        <legend>Please feel free to send a message</legend>
+        <label>Email <br><input class="input-box" type="text"><br></label>
+        <label>Message<br><textarea class="input-box" type="text"></textarea><br></label>
+
+        <fieldset class="inner">
+          <legend>Would you like a reply?</legend>
+          <label><input type="radio" name="reply" value="yes"> Yes<br></label>
+          <label><input type="radio" name="reply" value="no"> No<br></label>
+        </fieldset>
+        <br><button type="submit" value="Send Message">Send Message</button>
+      </fieldset>
+    </form>
+  </body>
 </html>
