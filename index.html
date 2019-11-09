@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Form Demo</title>
-    <style>
-      form {
-        display: grid;
-        justify-items: center;
-      }
-      fieldset {
-        background-color: aliceblue;
-        border-radius: .25rem;
-        width: 50%;
-        height: max-content;
-      }
-      button {
-        font-family: 'Lato', sans-serif;
-        font-size: 2rem;
-        color: white;
-        background-color: aquamarine;
-        border-radius: .25rem;
-        padding: .5rem .5rem;
-      }
-      legend {
-        font-family: 'Lato', sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: aquamarine;
-        border: 1px solid gray;
-        border-radius: .25rem;
-        padding: .5rem .5rem;
-        background-color: white;
-      }
-      .input-box {
-        border: 1px solid gray;
-        width: 80%;
-      }
-      label {
-        font-family: 'Lato', sans-serif;
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-    </style>
-  </head>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  <body>
-    <form name="contact" method="POST" data-netlify="true">
-      <fieldset>
-        <legend>Please feel free to send a message</legend>
-        <label>Email <br><input class="input-box" type="text"><br></label>
-        <label>Message<br><textarea class="input-box" type="text"></textarea><br></label>
 
-        <fieldset class="inner">
-          <legend>Would you like a reply?</legend>
-          <label><input type="radio" name="reply" value="yes"> Yes<br></label>
-          <label><input type="radio" name="reply" value="no"> No<br></label>
-        </fieldset>
-        <br><button type="submit" value="Send Message">Send Message</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Demo</title>
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      font-size: 100%;
+      margin: 2rem 10%;
+    }
+
+    form {
+      display: grid;
+      justify-items: center;
+    }
+
+    .outer {
+      background-color: whitesmoke;
+      border-radius: .25rem;
+      border: 1px solid lightgrey;
+      width: 45%;
+      height: max-content;
+    }
+
+    .inner {
+      border: 1px solid lightgrey;
+    }
+
+    legend {
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgb(12, 173, 106);
+      border: 1px solid lightgrey;
+      border-radius: .25rem;
+      padding: .5rem .5rem;
+      background-color: white;
+    }
+
+    .input-box {
+      border: 1.25px solid gray;
+      width: 80%;
+    }
+
+    textarea {
+      border: 1.25px solid gray;
+      width: 80%;
+    }
+
+    label {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    button {
+      font-family: 'Lato', sans-serif;
+      font-size: 1.75rem;
+      color: white;
+      background-color: rgb(12, 173, 106);
+      border-radius: .25rem;
+      border: rgb(12, 173, 106);
+      padding: .75rem .75rem;
+    }
+  </style>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+<body>
+  <form name="contact" method="POST" data-netlify="true">
+    <fieldset class="outer">
+      <legend>Please feel free to send a message</legend>
+      <label>Email <br><input class="input-box" type="email"><br></label>
+      <label>Message<br><textarea type="textarea" rows="4"></textarea><br><br></label>
+
+      <fieldset class="inner">
+        <legend>Would you like a reply?</legend>
+        <label><input class="input-button" type="radio" name="reply" value="yes"> Yes<br></label>
+        <label><input class="input-button" type="radio" name="reply" value="no"> No<br></label>
       </fieldset>
-    </form>
-  </body>
+      <br><button type="submit" value="Send Message">Send Message</button>
+    </fieldset>
+  </form>
+</body>
+
 </html>
